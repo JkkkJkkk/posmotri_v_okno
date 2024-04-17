@@ -87,6 +87,10 @@ ol {
 	font-family: 'Oswald', sans-serif;
 }
 
+.content__list-item:not(:first-child){
+	margin-top: 30px;
+}
+
 .content__accent {
 	color: #545050;
 }
@@ -96,7 +100,7 @@ ol {
 	font-weight: 400;
 }
 
-fieldset {
+.search-form__fieldset {
 	border: none;
 }
 
@@ -106,7 +110,7 @@ fieldset {
 	border-top: 1px solid #ffffff;
 	border-bottom: 1px solid #ffffff;
 	width: 225px;
-	height: 27px;
+	min-height: 27px;
 	margin-top: 5px;
 	font-family: 'Fira Sans Condensed', sans-serif;
 	font-size: 18px;
@@ -114,6 +118,7 @@ fieldset {
 	line-height: 21.6px;
 	color: #fff;
 	cursor: text;
+	appearance: none;
 }
 
 .button {
@@ -125,17 +130,16 @@ fieldset {
 	line-height: 21.6px;
 	border: 1px solid #fff;
 	cursor: pointer;
+	height: 34px;
 }
 
 .search-form__submit-button {
 	width: 194px;
-	height: 34px;
 	margin-top: 20px;
 }
 
 .more-button {
 	width: 399px;
-	height: 34px;
 }
 
 .visually-hidden {
@@ -152,7 +156,7 @@ fieldset {
 	margin-top: 5px;
 }
 
-input[type='checkbox'] + span {
+.search-form__checkbox + .search-form__pseudo-checkbox{
 	width: 19px;
 	height: 19px;
 	background-color: transparent;
@@ -160,7 +164,7 @@ input[type='checkbox'] + span {
 	cursor: pointer;
 }
 
-label span {
+.search-form__label  .search-form__pseudo-checkbox{
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -170,11 +174,15 @@ label span {
 }
 
 .content__video-card-title {
-	font-family: Oswald;
+	font-family: Oswald, sans-serif;
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 30px;
 	text-transform: uppercase;
+	text-overflow: ellipsis;   
+	white-space: nowrap;   
+	overflow: hidden;
+	max-width: 200px;
 }
 
 .content__card-link {
@@ -199,6 +207,10 @@ label span {
 	font-weight: 400;
 	line-height: 16.2px;
 	margin-top: 6px;
+	text-overflow: ellipsis;   
+	white-space: nowrap;   
+	overflow: hidden;
+	max-width: 200px;
 }
 
 .search-form__textfield:focus {
@@ -210,7 +222,7 @@ label span {
 	outline-offset: 2px;
 }
 
-input[type='checkbox']:checked + span {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
 	width: 16px;
 	height: 16px;
 	background-color: #fff;
@@ -219,7 +231,7 @@ input[type='checkbox']:checked + span {
 }
 
 .search-form__label-text:focus {
-	border: none;
+	outline: none;
 }
 
 .button:focus {
@@ -227,7 +239,7 @@ input[type='checkbox']:checked + span {
 }
 
 .button:active {
-	background-color: rgba(255, 255, 255, 0.25);
+	background-color: #545050;
 }
 
 .button:hover {
@@ -248,7 +260,7 @@ input[type='checkbox']:checked + span {
 }
 
 .content__card-link {
-	background-color: rgba(255, 255, 255, 0.25);
+	background-color: #545050;
 }
 
 .content__video-card:hover {
